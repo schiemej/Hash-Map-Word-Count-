@@ -1,4 +1,4 @@
-#Author Jacob Schiemenz
+# Author Jacob Schiemenz
 # word_count.py
 # ===================================================
 # Implement a word counter that counts the number of
@@ -10,18 +10,10 @@
 import re
 from hash_map import HashMap
 
-"""
-This is the regular expression used to capture words. It could probably be endlessly
-tweaked to catch more words, but this provides a standard we can test against, so don't
-modify it for your assignment submission.
-"""
+# Regular expression used to capture words from the document. 
 rgx = re.compile("(\w[\w']*\w|\w)")
 
 def hash_function_2(key):
-    """
-    This is a hash function that can be used for the hashmap.
-    """
-
     hash = 0
     index = 0
     for i in key:
@@ -75,4 +67,4 @@ def top_words(source, number):
     return final_list[:number]
 
 #example of how program should be used
-#print(top_words("alice.txt",10))
+print(top_words("alice.txt",10))
